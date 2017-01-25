@@ -1,0 +1,53 @@
+/*@import url('https://fonts.googleapis.com/css?family=Lato');*/
+
+body {
+	margin:0;
+	padding:0;
+}
+
+
+
+#en_tete {
+	background-color: green;
+	height: 100px;
+	line-height: 100px;
+}
+
+#contenu {
+	font-family: "Helvetica";
+}
+
+h1 {
+	margin:0;
+	text-align: center;
+	color: white;
+	font-family: "Lato";
+}
+
+#gauche {
+	float: left;
+	width:calc(60% - 5px);
+	margin-right: 5px;
+	margin-left: 10%;
+}
+
+#droite {
+	float: right;
+	width:calc(20% - 5px);
+	margin-left: 5px;
+	margin-right: 10%;
+}
+
+#photos {
+	background-color: rgba(200, 0, 0, 0.2);
+	height: 200px;
+}
+
+#conteneur {
+	background-color: rgba(0, 160, 0, 0.2);
+}
+
+#events {
+	background-color: rgba(0, 160, 0, 0.2);
+	text-align: center;
+}

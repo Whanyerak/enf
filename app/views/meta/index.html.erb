@@ -1,54 +1,42 @@
-<!DOCTYPE html>
-<html lang="fr">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="stylesheet" href="style.css"/>
-		<title> ENF - PEV </title>
-	</head>
-	<body>
-		<DIV id="en_tete">
-		<h1>ENF - GROUPE PAUL-EMILE-VICTOR</h1>
-		</DIV>
+<DIV class="right_top_button">
+        
+    <%= link_to "Inscription", inscriptions_url %>
 
-		<DIV id="contenu">
+</DIV>
 
-			<DIV id="gauche">
 
-				<DIV id="photos">
+<DIV id="gauche">
+
+	<DIV id="photos">
 
 		<h2>Ici des photos qui défilent</h2>
 
-				</DIV>
+	</DIV>
 
-				<DIV id="conteneur">
+	<DIV id="conteneur">
 
 		<h2>Description du groupe</h2>
 		<p>Le groupe de Saint-Amand les Eaux, du nom de Paul Emile Victor, est composé d'une troupe masculine, d'une troupe féminine et de deux meutes également masculine et féminine. Il y a également un clan (routiers) qui est pour l'instant plutôt peu peuplé mais d'une population croissante.</p>
-		
-				</DIV>
 
-				<DIV id="conteneur">
+	</DIV>
+
+	<DIV id="conteneur">
 
 		<h2>Description de l'association</h2>
 
 		<p>L'association des Eclaireurs Neutres de France est une association de scoutisme neutre qui accepte toute religion et permet à chaque enfant de grandir dans ses croyances que ce soit par la religion ou par des activités autour des grandes valeurs inculquée par le scoutisme pour les athées ou agnostiques.</p>
 
-				</DIV>
+	</DIV>
 
-			</DIV>
+</DIV>
 
-			<DIV id="droite">
+<DIV id="droite">
 
-				<DIV id="events">
+	<DIV id="events">
 
-		<h2><a href="events.html">Evénements</a></h2>
+		<h2><%= link_to "Évènements", events_url %></h2>
 		<p>Ici on retrouvera le dernier événement de l'association de parents, le dernier camp, et le prochain camp.</p>
 
-				</DIV>
+	</DIV>
 
-			</DIV>
-
-		</DIV>
-
-	</body>
-</html>
+</DIV>

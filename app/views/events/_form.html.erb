@@ -26,7 +26,13 @@
     <%= f.text_field :place %>
   </div>
 
+  <div class="field">
+    <%= f.label :parents, "Réunion de l'association de parents" %>
+    <%= f.check_box :parents %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>

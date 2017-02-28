@@ -1,14 +1,44 @@
 <!DOCTYPE html>
+
 <html>
+
   <head>
+
     <title>Scout</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
+
   <body>
-    <%= yield %>
+     
+
+
+     <% if controller == 'meta' %>
+
+         <DIV class="right_top_button">
+            
+            <%= link_to "Inscription", inscriptions_url %>
+
+        </DIV>
+
+    <% end %>
+
+     <DIV id="en_tete">
+
+		<h1>ENF - GROUPE PAUL-EMILE-VICTOR</h1>
+
+	</DIV>
+
+	<DIV id="contenu">
+
+    	<%= yield %>
+
+   	</DIV>
+
   </body>
+
 </html>

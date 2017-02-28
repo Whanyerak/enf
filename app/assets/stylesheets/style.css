@@ -6,11 +6,17 @@ body {
 }
 
 
-
 #en_tete {
 	background-color: green;
 	height: 100px;
 	line-height: 100px;
+}
+
+.right_top_button, .right_top_button:visited {
+	float: top;
+	float: right;
+	margin-top: 25px;
+	color: white;
 }
 
 #contenu {
@@ -51,3 +57,5 @@ h1 {
 	background-color: rgba(0, 160, 0, 0.2);
 	text-align: center;
 }
+
+

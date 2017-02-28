@@ -5,9 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Happen on</th>
-      <th>Place</th>
+      <th>Titre</th>
+      <th>Date</th>
+      <th>Endroit</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,9 +18,9 @@
         <td><%= event.title %></td>
         <td><%= event.happen_on %></td>
         <td><%= event.place %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Voir', event %></td>
+        <td><%= link_to 'Editer', edit_event_path(event) %></td>
+        <td><%= link_to 'Supprimer', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Event', new_event_path %>
+<%= link_to 'Nouvel événement', new_event_path %>

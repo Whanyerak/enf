@@ -15,21 +15,19 @@
 
   <body>
      
+    <DIV id="en_tete">
+    
+        <h1>ENF - GROUPE PAUL-EMILE-VICTOR</h1>
 
+        <% if controller_name == 'meta' %>
 
-     <% if controller == 'meta' %>
-
-         <DIV class="right_top_button">
+            <DIV class="right_top_button">
             
-            <%= link_to "Inscription", inscriptions_url %>
+                <%= link_to "Inscription", inscriptions_url %>
 
-        </DIV>
+            </DIV>
 
-    <% end %>
-
-     <DIV id="en_tete">
-
-		<h1>ENF - GROUPE PAUL-EMILE-VICTOR</h1>
+        <% end %>
 
 	</DIV>
 

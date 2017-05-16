@@ -1,31 +1,27 @@
-<p id="notice"><%= notice %></p>
+<h1>Évènements à venir</h1>
 
-<h1>Events</h1>
+<% @upcoming_events.each do |event| %>
+  <div class="event">
+    <h3><%= event.title %></h3>
 
-<table>
-  <thead>
-    <tr>
-      <th>Titre</th>
-      <th>Date</th>
-      <th>Endroit</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <ul>
+      <li>Date : <%= time_ago_in_words event.happen_on %></li>
+      <li>Lieu : <%= event.place %></li>
+    </ul>
+  </div>
+<% end %>
 
-  <tbody>
-    <% @events.each do |event| %>
-      <tr>
-        <td><%= event.title %></td>
-        <td><%= event.happen_on %></td>
-        <td><%= event.place %></td>
-        <td><%= link_to 'Voir', event %></td>
-        <td><%= link_to 'Editer', edit_event_path(event) %></td>
-        <td><%= link_to 'Supprimer', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<h2>Évènements précédents</h2>
 
-<br>
+<% @passed_events.each do |event| %>
+  <div class="event">
+    <h3><%= event.title %></h3>
+
+    <ul>
+      <li>Date : <%= time_ago_in_words event.happen_on %></li>
+      <li>Lieu : <%= event.place %></li>
+    </ul>
+  </div>
+<% end %>
 
 <%= link_to 'Nouvel événement', new_event_path %>

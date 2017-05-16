@@ -2,10 +2,21 @@
 
 @import "normalize.css";
 
+@import "components/event";
+
 @import "layout/header";
 @import "layout/content";
 
 @import "pages/index";
+
+%block {
+  background: white;
+  border: 1px solid #DEDEDE;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  margin: 10px 0;
+  padding: 0 15px 5px 15px;
+}
 
 body {
   color: #333;

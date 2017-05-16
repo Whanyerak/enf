@@ -79,6 +79,7 @@ GEM
     minitest (5.10.2)
     multi_json (1.12.1)
     nio4r (2.0.0)
+    nivo-rails (1.0.1)
     nokogiri (1.7.2)
       mini_portile2 (~> 2.1.0)
     puma (3.8.2)
@@ -164,6 +165,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
+  nivo-rails (~> 1.0.1)
   puma (~> 3.0)
   rails (~> 5.1.1)
   sass-rails (~> 5.0)

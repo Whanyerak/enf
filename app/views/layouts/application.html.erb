@@ -10,16 +10,16 @@
   </head>
   <body>
 
-    <div id="en_tete">
-      <h1>ENF - GROUPE PAUL-EMILE-VICTOR</h1>
+    <div class="header">
+      <h1>ENF &mdash; GROUPE PAUL-EMILE-VICTOR</h1>
         <% if controller_name == 'meta' %>
           <div class="right_top_button">
             <%= link_to "Inscription", inscriptions_url %>
           </div>
         <% end %>
-	   </div>
+	  </div>
 
-  	<div id="contenu">
+    <div class="content">
       <%= yield %>
     </div>
   </body>

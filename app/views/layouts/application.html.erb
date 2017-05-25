@@ -12,11 +12,10 @@
 
     <div class="header">
       <h1>ENF &mdash; GROUPE PAUL-EMILE-VICTOR</h1>
-        <% if controller_name == 'meta' %>
-          <div class="right_top_button">
-            <%= link_to "Connexion", new_session_path(:user) %>
-          </div>
-        <% end %>
+
+      <div class="right_top_button">
+        <%= link_to "Déconnexion", destroy_session_path(:user), method: :delete %>
+      </div>
 	  </div>
 
     <div class="content">

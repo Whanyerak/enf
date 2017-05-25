@@ -6,7 +6,9 @@
 
     <ul>
       <li>Date : <%= time_ago_in_words event.happen_on %></li>
-      <li>Lieu : <%= event.place %></li>
+      <% if event.place.size > 0 %>
+        <li>Lieu : <%= event.place %></li>
+      <% end %>
     </ul>
   </div>
 <% end %>
@@ -19,7 +21,9 @@
 
     <ul>
       <li>Date : <%= time_ago_in_words event.happen_on %></li>
-      <li>Lieu : <%= event.place %></li>
+      <% if event.place.size > 0 %>
+        <li>Lieu : <%= event.place %></li>
+      <% end %>
     </ul>
   </div>
 <% end %>

@@ -1,0 +1,23 @@
+label {
+  width: 200px;
+  float: left;
+  line-height: 1em;
+}
+
+textarea, input[type="text"] {
+  padding: 5px;
+  display: block;
+  border: 1px solid darken(#dfe2e5, 10%);
+  border-radius: 5px;
+  margin-bottom: 1em;
+  transition: 0.2s ease-in;
+
+  &:focus {
+  	border-color: green;
+  	box-shadow: 1px 1px 5px rgba(0, 255, 0, 0.4);
+  }
+}
+
+.field {
+  min-height: 3em;
+}

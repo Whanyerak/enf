@@ -1,25 +1,19 @@
 <h1>Topics</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<p class="right">
+  <%= link_to 'Nouveau sujet', new_topic_path, class: 'button' %>
+</p>
 
-  <tbody>
-    <% @topics.each do |topic| %>
-      <tr>
-        <td><%= topic.title %></td>
-        <td><%= link_to 'Show', topic %></td>
-        <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
-        <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<div class="clearer"></div>
+
+<div class="group">
+  <% @topics.each do |topic| %>
+    <%= link_to topic, class: "item" do %>
+      <%= topic.title %>
+      <div class="right">
+        Il y a <%= time_ago_in_words topic.updated_at %>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  <% end %>
+</div>
 
-<br>
-
-<%= link_to 'New Topic', new_topic_path %>

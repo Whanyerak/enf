@@ -1,6 +1,11 @@
 .photos {
   @extend %block;
   height: 420px;
+  overflow: hidden;
+
+  #slider {
+  	height: 400px;
+  }
 }
 
 .conteneur {

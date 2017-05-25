@@ -31,8 +31,13 @@
     <%= f.check_box :parents %> Réunion de l'association de parents
   </div>
 
+  <div class="field">
+    <label>&nbsp;</label>
+    <%= f.check_box :pinned %> Afficher sur la page d'accueil
+  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Envoyer", class: 'button' %>
   </div>
 
 <% end %>

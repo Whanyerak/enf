@@ -45,7 +45,12 @@
 <div class="droite">
   <div class="events">
     <h2>Évènements à venir</h2>
-    <p>Ici on retrouvera le dernier événement de l'association de parents, le dernier camp, et le prochain camp.</p>
+    <p>Ici on retrouvera le prochain événement de l'association de parents, le dernier évènement de l'association des parents, et le prochain camp.</p>
+
+    <% @events.each do |event| %>
+      <h4><%= event.title %></h4>
+      <p>Le <%= l event.happen_on, format: :long %></p>
+    <% end %>
     <%= link_to "Tous les évènements", events_url, class: 'button' %>
   </div>
 </div>

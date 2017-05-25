@@ -1,8 +1,18 @@
 <h1>Évènements à venir</h1>
 
+<div class="right">
+  <%= link_to 'Nouvel événement', new_event_path, class: 'button' %>
+</div>
+
+<div class="clearer"></div>
+
 <% @upcoming_events.each do |event| %>
   <div class="event">
     <h3><%= event.title %></h3>
+
+    <div class="right">
+      <%= link_to octicon("pencil"), edit_event_path(event) %>
+    </div>
 
     <ul>
       <li>Date : <%= time_ago_in_words event.happen_on %></li>
@@ -19,6 +29,10 @@
   <div class="event">
     <h3><%= event.title %></h3>
 
+    <div class="right">
+      <%= link_to octicon("pencil"), edit_event_path(event) %>
+    </div>
+
     <ul>
       <li>Date : <%= time_ago_in_words event.happen_on %></li>
       <% if event.place.size > 0 %>
@@ -27,5 +41,3 @@
     </ul>
   </div>
 <% end %>
-
-<%= link_to 'Nouvel événement', new_event_path %>

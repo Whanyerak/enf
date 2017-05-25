@@ -26,12 +26,26 @@
   <div class="conteneur">
     <h2>Forum</h2>
     <p>Ici on a le forum avec les sujets de questionnement des parents.</p>
+
+    <% if @topics.size > 0 %>
+      <div class="group">
+      <% @topics.each do |topic| %>
+        <%= link_to topic, class: 'item' do %>
+          <div class="right">Il y a <%= time_ago_in_words topic.updated_at %></div>
+          <%= topic.title %>
+        <% end %>
+      <% end %>
+      </div>
+    <% else %>
+      <em>Aucun sujet de discussion pour le moment.</em>
+    <% end %>
   </div>
 </div>
 
 <div class="droite">
   <div class="events">
-    <h2><%= link_to "Évènements", events_url %></h2>
+    <h2>Évènements à venir</h2>
     <p>Ici on retrouvera le dernier événement de l'association de parents, le dernier camp, et le prochain camp.</p>
+    <%= link_to "Tous les évènements", events_url, class: 'button' %>
   </div>
 </div>

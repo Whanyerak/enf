@@ -88,6 +88,11 @@ GEM
     nivo-rails (1.0.1)
     nokogiri (1.7.2)
       mini_portile2 (~> 2.1.0)
+    octicons (3.0.1)
+      nokogiri (>= 1.6.3.1)
+    octicons_helper (3.0.1)
+      octicons (~> 3.0)
+      rails
     orm_adapter (0.5.0)
     puma (3.8.2)
     rack (2.0.2)
@@ -178,6 +183,7 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.0.5)
   nivo-rails (~> 1.0.1)
+  octicons_helper (~> 3.0.1)
   puma (~> 3.0)
   rails (~> 5.1.1)
   sass-rails (~> 5.0)

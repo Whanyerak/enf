@@ -35,6 +35,8 @@ gem 'nivo-rails', '~> 1.0.1'
 
 gem 'devise', '~> 4.3.0'
 
+gem 'octicons_helper', '~> 3.0.1'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

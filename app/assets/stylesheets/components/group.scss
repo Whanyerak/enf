@@ -1,0 +1,19 @@
+.group {
+	border-radius: 5px;
+	border: 1px solid darken(#dfe2e5, 10%);
+
+	.item {
+		border-bottom: 1px solid darken(#dfe2e5, 10%);
+		padding: 1em 30px;
+    display: block;
+    text-decoration: none;
+
+    .right {
+      float: right;
+    }
+
+    &:hover {
+      background: rgba(10, 255, 10, 0.1);
+    }
+	}
+}

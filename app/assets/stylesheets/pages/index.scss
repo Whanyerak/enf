@@ -1,3 +1,7 @@
+.photos, .conteneur, .events {
+	text-align: justify;
+}
+
 .photos {
   @extend %block;
   height: 420px;
@@ -14,5 +18,4 @@
 
 .events {
   @extend %block;
-  text-align: center;
 }

@@ -19,7 +19,19 @@
 	  </div>
 
     <div class="content">
+      <% if notice %>
+        <div class="notice"><%= notice %></div>
+      <% end %>
+
+      <% if alert %>
+        <div class="alert"><%= alert %></div>
+      <% end %>
+
       <%= yield %>
+    </div>
+
+    <div class="footer">
+      Association ENF &mdash; Groupe Paul-Emile-Victor
     </div>
   </body>
 </html>

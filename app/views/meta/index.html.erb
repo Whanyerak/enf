@@ -27,6 +27,10 @@
     <h2>Forum</h2>
     <p>Ici on a le forum avec les sujets de questionnement des parents.</p>
 
+    <div class="right">
+      <%= link_to "Nouveau sujet", new_topic_path, class: 'button' %>
+    </div>
+
     <% if @topics.size > 0 %>
       <div class="group">
       <% @topics.each do |topic| %>

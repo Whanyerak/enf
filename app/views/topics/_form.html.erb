@@ -18,10 +18,10 @@
 
   <div class="field">
     <%= form.label :description %>
-    <%= form.text_area :description, id: :topic_description %>
+    <%= form.text_area :description, id: :topic_description, rows: 10 %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: 'button' %>
   </div>
 <% end %>

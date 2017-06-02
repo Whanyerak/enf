@@ -10,6 +10,7 @@ class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
       password_confirmation: 'azertyuiop'
     )
 
+    visit '/'
     fill_in 'Courriel', with: 'mama@dou.fr'
     fill_in 'Mot de passe', with: 'azertyuiop'
     click_on 'Log in'

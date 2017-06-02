@@ -1,20 +1,22 @@
 label {
-  width: 200px;
-  float: left;
+  display: block;
+  margin-bottom: 1em;
   line-height: 1em;
 }
 
 textarea, input[type="text"] {
-  padding: 5px;
+  padding: 10px;
   display: block;
   border: 1px solid darken(#dfe2e5, 10%);
-  border-radius: 5px;
+  border-radius: 3px;
   margin-bottom: 1em;
   transition: 0.2s ease-in;
+  width: 100%;
+  box-sizing: border-box;
 
   &:focus {
-  	border-color: green;
-  	box-shadow: 1px 1px 5px rgba(0, 255, 0, 0.4);
+    border-color: green;
+    box-shadow: 1px 1px 5px rgba(0, 255, 0, 0.2);
   }
 }
 

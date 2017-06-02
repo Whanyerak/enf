@@ -31,6 +31,8 @@
       <%= link_to "Nouveau sujet", new_topic_path, class: 'button' %>
     </div>
 
+    <div class="clearer"></div>
+
     <% if @topics.size > 0 %>
       <div class="group">
       <% @topics.each do |topic| %>

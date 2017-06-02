@@ -1,7 +1,7 @@
 <h1>Évènements à venir</h1>
 
 <div class="right">
-  <%= link_to 'Nouvel événement', new_event_path, class: 'button' %>
+  <%= link_to 'Nouvel évènement', new_event_path, class: 'button' %>
 </div>
 
 <div class="clearer"></div>
@@ -35,7 +35,7 @@
 
     <ul>
       <li>Date : <%= time_ago_in_words event.happen_on %></li>
-      <% if event.place.size > 0 %>
+      <% if event.place.present? %>
         <li>Lieu : <%= event.place %></li>
       <% end %>
     </ul>

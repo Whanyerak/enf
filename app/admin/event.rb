@@ -1,5 +1,6 @@
 ActiveAdmin.register Event do
   permit_params :title, :happen_on, :place, :parents, :pinned
+  menu label: "Évènements"
 
   index do
     selectable_column

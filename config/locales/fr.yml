@@ -7,6 +7,8 @@ fr:
         title: Titre
         happen_on: Date
         place: Lieu
+        parents: Réunion des parents
+        pinned: Épinglé
       topic:
         title: Titre
   helpers:

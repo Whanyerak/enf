@@ -6,8 +6,6 @@ ActiveAdmin.register Event do
     selectable_column
     id_column
     column :title
-    column :happen_on
-    column :place
     column :parents
     column :pinned
     actions

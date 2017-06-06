@@ -1,5 +1,6 @@
 ActiveAdmin.register User, as: "Utilisateurs" do
-  permit_params :email, :password, :password_confirmation
+  permit_params :first_name, :last_name, :admin,
+                :email, :password, :password_confirmation
 
   index do
     selectable_column
@@ -18,6 +19,9 @@ ActiveAdmin.register User, as: "Utilisateurs" do
 
   form do |f|
     f.inputs "Admin Details" do
+      f.input :first_name
+      f.input :last_name
+      f.input :admin
       f.input :email
       f.input :password
       f.input :password_confirmation
@@ -33,6 +37,13 @@ ActiveAdmin.register User, as: "Utilisateurs" do
       row :admin
       row :branch
       row :current_sign_in_at
+    end
+  end
+
+  controller do
+    def update_resource(object, attributes)
+      update_method = attributes.first[:password].present? ? :update_attributes : :update_without_password
+      object.send(update_method, *attributes)
     end
   end
 end

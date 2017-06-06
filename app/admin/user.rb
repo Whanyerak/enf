@@ -1,20 +1,20 @@
-ActiveAdmin.register User do
+ActiveAdmin.register User, as: "Utilisateurs" do
   permit_params :email, :password, :password_confirmation
 
   index do
     selectable_column
     id_column
+    column :full_name
     column :email
+    column :admin
     column :current_sign_in_at
-    column :sign_in_count
-    column :created_at
     actions
   end
 
+  filter :first_name
+  filter :last_name
   filter :email
-  filter :current_sign_in_at
-  filter :sign_in_count
-  filter :created_at
+  filter :admin
 
   form do |f|
     f.inputs "Admin Details" do
@@ -25,4 +25,14 @@ ActiveAdmin.register User do
     f.actions
   end
 
+  show do
+    attributes_table do
+      row :first_name
+      row :last_name
+      row :email
+      row :admin
+      row :branch
+      row :current_sign_in_at
+    end
+  end
 end

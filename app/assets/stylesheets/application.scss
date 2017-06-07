@@ -1,5 +1,12 @@
 $green: #226A34;
 $light-green: #2E6F3D;
+$red: #E53935;
+$dark-red: #C62828;
+$orange: #F18D01;
+$dark-orange: #CD7801;
+$blue: #A8D7FF;
+$dark-blue: #60B8FE;
+
 $body-bg-color: #FBF8F5;
 $body-color: #666;
 $banner-bg-color: #F5F0EC;
@@ -16,6 +23,7 @@ $banner-color: #625F5D;
 @import "components/event";
 @import "components/forms";
 @import "components/group";
+@import "components/label";
 
 @import "layout/header";
 @import "layout/content";

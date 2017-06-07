@@ -21,7 +21,7 @@ class TopicsController < ApplicationController
     @topic.user = current_user
 
     if @topic.save
-      redirect_to @topic, notice: 'Topic was successfully created.'
+      redirect_to @topic, notice: 'Sujet créé avec succès.'
     else
       render :new
     end
@@ -29,7 +29,7 @@ class TopicsController < ApplicationController
 
   def update
     if @topic.update(topic_params)
-      redirect_to @topic, notice: 'Topic was successfully updated.'
+      redirect_to @topic, notice: 'Sujet mis à jour avec succès.'
     else
       render :edit
     end
@@ -37,7 +37,7 @@ class TopicsController < ApplicationController
 
   def destroy
     @topic.destroy
-    redirect_to topics_url, notice: 'Topic was successfully destroyed.'
+    redirect_to topics_url, notice: 'Topic détruit avec succès.'
   end
 
   private

@@ -33,3 +33,4 @@ fr:
     submit:
       topic:
         create: Nouveau sujet
+        update: Modifier ce sujet

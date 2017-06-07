@@ -1,5 +1,6 @@
 <% banner title: @topic.title,
-          description: simple_format(@topic.description) %>
+          description: simple_format(@topic.description),
+          management_icons: true %>
 
 <h3>Commentaires</h3>
 
@@ -13,6 +14,15 @@
     </div>
 
     <div class="comment">
+      <% if current_user.admin %>
+        <div class="right">
+          <p>
+            <%= link_to octicon("trashcan"), [@topic, comment], method: :delete,
+              data: { confirm: 'Êtes vous sûr ? '} %>
+          </p>
+        </div>
+      <% end %>
+
       <%= simple_format(comment.body) %>
     </div>
   <% end %>

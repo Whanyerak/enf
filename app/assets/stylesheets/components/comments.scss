@@ -35,6 +35,7 @@
 
   .comment {
     @extend %block;
+    fill: $body-color;
     margin: 2em 0!important;
     padding: 0 0.8em!important;
   }

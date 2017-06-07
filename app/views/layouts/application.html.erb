@@ -22,11 +22,21 @@
 
     <% if content_for(:title) %>
       <div class="banner">
-        <% if content_for(:title) %>
-          <h2><%= content_for(:title) %></h2>
-        <% end %>
-
         <div class="content">
+          <% if content_for(:title) %>
+            <h2><%= content_for(:title) %></h2>
+          <% end %>
+
+          <% if content_for(:management_icons) %>
+            <div class="right">
+              <%= link_to octicon("pencil"), edit_topic_path(@topic) %>
+              <%= link_to octicon("trashcan"), @topic,
+                    method: :delete, data: { confirm: "Êtes vous sûr ?" }  %>
+            </div>
+
+            <div class="clearer"></div>
+          <% end %>
+
           <div class="lead">
             <%= content_for(:description) %>
           </div>

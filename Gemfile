@@ -25,6 +25,8 @@ gem 'activeadmin', '~> 1.0.0'
 
 gem 'octicons_helper', '~> 3.0.1'
 
+gem 'active_decorator', '~> 0.9.0'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

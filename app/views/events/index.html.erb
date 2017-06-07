@@ -1,29 +1,11 @@
 <h1>Évènements à venir</h1>
 
 <% @upcoming_events.each do |event| %>
-  <div class="event">
-    <h3><%= event.title %></h3>
-
-    <ul>
-      <li>Date : <%= time_ago_in_words event.happen_on %></li>
-      <% if event.place.size > 0 %>
-        <li>Lieu : <%= event.place %></li>
-      <% end %>
-    </ul>
-  </div>
+  <%= event.box %>
 <% end %>
 
 <h2>Évènements précédents</h2>
 
 <% @passed_events.each do |event| %>
-  <div class="event">
-    <h3><%= event.title %></h3>
-
-    <ul>
-      <li>Date : <%= time_ago_in_words event.happen_on %></li>
-      <% if event.place.present? %>
-        <li>Lieu : <%= event.place %></li>
-      <% end %>
-    </ul>
-  </div>
+  <%= event.box %>
 <% end %>

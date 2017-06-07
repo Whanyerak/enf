@@ -27,6 +27,8 @@ gem 'octicons_helper', '~> 3.0.1'
 
 gem 'active_decorator', '~> 0.9.0'
 
+gem 'carrierwave', '~> 1.0'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

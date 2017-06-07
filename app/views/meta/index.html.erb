@@ -1,13 +1,16 @@
 <div class="gauche">
 
-  <div class="photos">
-    <div class="theme-dark">
-      <%= nivo_slider id: "slider" do %>
-        <%= image_tag "foo.png", title: "Eeeeh oui !" %>
-        <%= image_tag "bar.png", title: "Eeeh non !" %>
-      <% end %>
+  <% unless @photos.blank? %>
+    <div class="photos">
+      <div class="theme-dark">
+        <%= nivo_slider id: "slider" do %>
+          <% @photos.each do |photo| %>
+            <%= image_tag photo.image.url, title: photo.title %>
+          <% end %>
+        <% end %>
+      </div>
     </div>
-  </div>
+  <% end %>
 
   <div class="conteneur">
     <h2>Description du groupe</h2>

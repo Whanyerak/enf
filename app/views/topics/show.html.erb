@@ -7,23 +7,11 @@
 <div class="comments">
   <% @comments.each do |comment| %>
     <div class="activity">
-      <div class="bubble">
-        <%= octicon("comment") %>
-      </div>
-      <p><%= comment.user.formatted_name %> &mdash; Il y a <%= time_ago_in_words comment.created_at %></p>
+      <%= comment.activity %>
     </div>
 
     <div class="comment">
-      <% if current_user.admin %>
-        <div class="right">
-          <p>
-            <%= link_to octicon("trashcan"), [@topic, comment], method: :delete,
-              data: { confirm: 'Êtes vous sûr ? '} %>
-          </p>
-        </div>
-      <% end %>
-
-      <%= simple_format(comment.body) %>
+      <%= comment.content(@topic) %>
     </div>
   <% end %>
 </div>

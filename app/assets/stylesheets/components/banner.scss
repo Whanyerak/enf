@@ -1,0 +1,11 @@
+.banner {
+  background: $banner-bg-color;
+  width: 100%;
+  padding: 1em 0;
+
+  h2 {
+    color: $banner-color;
+    text-align: center;
+    text-decoration: none;
+  }
+}

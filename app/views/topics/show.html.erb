@@ -1,10 +1,7 @@
-<h2><%= @topic.title %></h2>
+<% banner title: @topic.title,
+          description: simple_format(@topic.description) %>
 
-<div class="lead">
-  <%= simple_format @topic.description %>
-</div>
-
-<h4>Commentaires</h4>
+<h3>Commentaires</h3>
 
 <div class="comments">
   <% @comments.each do |comment| %>
@@ -12,7 +9,7 @@
       <div class="bubble">
         <%= octicon("comment") %>
       </div>
-      <p><strong><%= comment.user.full_name %></strong> a commenté il y a <%= time_ago_in_words comment.created_at %></p>
+      <p><strong><%= comment.user.full_name %></strong> &mdash; Il y a <%= time_ago_in_words comment.created_at %></p>
     </div>
 
     <div class="comment">
@@ -21,7 +18,7 @@
   <% end %>
 </div>
 
-<h4>Ajouter un commentaire</h4>
+<h3>Ajouter un commentaire</h3>
 
 <%= form_for([@topic, @topic.comments.build]) do |f| %>
   <div class="field">

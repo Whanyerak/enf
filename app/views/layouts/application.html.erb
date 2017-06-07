@@ -18,6 +18,20 @@
       </div>
 	  </div>
 
+    <% if content_for(:title) %>
+      <div class="banner">
+        <% if content_for(:title) %>
+          <h2><%= content_for(:title) %></h2>
+        <% end %>
+
+        <div class="content">
+          <div class="lead">
+            <%= content_for(:description) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
     <div class="content">
       <% if notice %>
         <div class="notice"><%= notice %></div>

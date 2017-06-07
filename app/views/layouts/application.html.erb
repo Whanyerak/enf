@@ -18,7 +18,7 @@
           <%= link_to "Déconnexion", destroy_session_path(:user), method: :delete %>
         </div>
       <% end %>
-	  </div>
+    </div>
 
     <% if content_for(:title) %>
       <div class="banner">
@@ -39,7 +39,7 @@
         <div class="notice"><%= notice %></div>
       <% end %>
 
-      <% if alert %>
+      <% if alert && controller_name != "sessions" %>
         <div class="alert"><%= alert %></div>
       <% end %>
 

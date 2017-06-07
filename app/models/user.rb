@@ -10,4 +10,14 @@ class User < ApplicationRecord
 
   	first_name + " " + last_name
   end
+
+  def self.branches
+    ['Louveteaux', 'Éclaireurs', 'Routiers']
+  end
+
+  def self.branches_collection
+    branches.map.with_index do |n, i|
+      [n,  i]
+    end
+  end
 end

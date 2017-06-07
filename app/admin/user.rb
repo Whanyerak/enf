@@ -1,5 +1,5 @@
 ActiveAdmin.register User, as: "Utilisateurs" do
-  permit_params :first_name, :last_name, :admin,
+  permit_params :first_name, :last_name, :admin, :branch,
                 :email, :password, :password_confirmation
 
   index do
@@ -8,6 +8,7 @@ ActiveAdmin.register User, as: "Utilisateurs" do
     column :full_name
     column :email
     column :admin
+    column :branch  { |u| User.branches[u.branch] }
     column :current_sign_in_at
     actions
   end
@@ -22,6 +23,7 @@ ActiveAdmin.register User, as: "Utilisateurs" do
       f.input :first_name
       f.input :last_name
       f.input :admin
+      f.input :branch, as: :select, collection: User.branches_collection, include_blank: false
       f.input :email
       f.input :password
       f.input :password_confirmation
@@ -35,7 +37,7 @@ ActiveAdmin.register User, as: "Utilisateurs" do
       row :last_name
       row :email
       row :admin
-      row :branch
+      row :branch { |u| User.branches[u.branch] }
       row :current_sign_in_at
     end
   end

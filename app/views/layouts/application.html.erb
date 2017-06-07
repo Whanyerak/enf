@@ -13,9 +13,11 @@
     <div class="header">
       <h1>ENF &mdash; GROUPE PAUL-EMILE-VICTOR</h1>
 
-      <div class="right_top_button">
-        <%= link_to "Déconnexion", destroy_session_path(:user), method: :delete %>
-      </div>
+      <% if user_signed_in? %>
+        <div class="right_top_button">
+          <%= link_to "Déconnexion", destroy_session_path(:user), method: :delete %>
+        </div>
+      <% end %>
 	  </div>
 
     <% if content_for(:title) %>

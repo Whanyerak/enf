@@ -1,3 +1,14 @@
+.gauche {
+  float: left;
+  width: calc(70% - 5px);
+}
+
+.droite {
+  float: right;
+  width: calc(30% - 5px);
+  margin-left: 10px;
+}
+
 .photos, .conteneur, .events {
 	text-align: justify;
 }
@@ -8,7 +19,9 @@
   overflow: hidden;
 
   #slider {
-  	height: 400px;
+    height: 400px;
+    max-height: 400px;
+    overflow: hidden;
     margin-top: 0.5em;
   }
 
@@ -33,4 +46,12 @@
 
 .events {
   @extend %block;
+
+  ul {
+    padding-left: 15px;
+  }
+
+  h3 {
+    margin-bottom: 0;
+  }
 }

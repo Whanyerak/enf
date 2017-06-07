@@ -1,0 +1,25 @@
+.notice, .alert {
+  border-radius: 3px;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+  padding: 10px;
+  width: 100%;
+
+  .content {
+    margin-top: 0;
+  }
+}
+
+.notice {
+  background: $blue;
+  box-shadow: 0 2px 0 $dark-blue;
+  color: white;
+  text-shadow: 1px 1px 1px $dark-blue;
+}
+
+.alert {
+  background: $red;
+  color: white;
+  box-shadow: 0 2px 0 $dark-red;
+  text-shadow: 1px 1px 1px $dark-red;
+}

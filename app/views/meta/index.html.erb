@@ -1,5 +1,4 @@
 <div class="gauche">
-
   <% unless @photos.blank? %>
     <div class="photos">
       <div class="theme-dark">
@@ -54,12 +53,29 @@
 <div class="droite">
   <div class="events">
     <h2>Évènements</h2>
-    <p>Ici on retrouvera le prochain événement de l'association de parents, le dernier évènement de l'association des parents, et le prochain camp.</p>
 
-    <% @events.each do |event| %>
-      <h4><%= event.title %></h4>
-      <p>Le <%= l event.happen_on, format: :long %></p>
+    <p>
+      Ici, vous pouvez retrouver tous les évènements (associations des
+      parents, prochain camp, etc.) qui peuvent vous intéresser :
+    </p>
+
+    <% unless @events.blank? %>
+      <ul>
+        <% @events.each do |event| %>
+          <li>
+            <h3><%= event.title %></h3>
+            <p>Le <%= l event.happen_on, format: :long %></p>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p>
+        <em>Aucun évènement à afficher.</em>
+      </p>
     <% end %>
-    <%= link_to "Tous les évènements &raquo;".html_safe, events_url, class: 'button' %>
+
+    <%= link_to "Tous les évènements &raquo;".html_safe, events_url, class: 'right button' %>
+
+    <div class="clearer"></div>
   </div>
 </div>

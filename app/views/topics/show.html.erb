@@ -22,12 +22,13 @@
 
 <%= form_for([@topic, @topic.comments.build]) do |f| %>
   <div class="field">
-    <%= f.text_area :body, placeholder: 'Votre commentaire ...', cols: 50, rows: 10 %>
+    <%= f.text_area :body, placeholder: 'Votre commentaire ...', cols: 50, rows: 10,
+          class: 'comment' %>
   </div>
 
   <div class="clearer"></div>
 
   <div class="actions">
-    <%= f.submit "Ajouter un commentaire", class: 'button' %>
+    <%= f.submit "Ajouter un commentaire", class: 'right button' %>
   </div>
 <% end %>

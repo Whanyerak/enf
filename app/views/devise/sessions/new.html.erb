@@ -1,7 +1,9 @@
 <div class="login">
   <h2>Connexion</h2>
 
-  <p>Avant de pouvoir continuer, veuillez tout d'abord vous connecter.</p>
+  <div class="alert">
+    Avant de pouvoir continuer, veuillez tout d'abord vous connecter.
+  </div>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
@@ -22,7 +24,7 @@
     <% end -%>
 
     <div class="actions">
-      <%= f.submit "Connexion", class: 'button' %>
+      <%= f.submit "Connexion", class: 'right button' %>
     </div>
   <% end %>
 

@@ -4,11 +4,6 @@
   margin: auto!important;
 
   input[type="password"], input[type="email"] {
-    border-top-color: $banner-color;
-
-    &:focus {
-      border-top-color: lighten($light-green, 10%);
-      box-shadow: none;
-    }
+    background: $body-bg-color;
   }
 }

@@ -7,6 +7,7 @@ class TopicsController < ApplicationController
 
   def show
     @comments = @topic.comments.includes(:user)
+    @comment  = @topic.comments.build
   end
 
   def new

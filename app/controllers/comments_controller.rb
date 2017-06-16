@@ -3,9 +3,13 @@ class CommentsController < ApplicationController
     @topic = Topic.find(params[:topic_id])
     @comment = @topic.comments.build(comment_params)
     @comment.user = current_user
-    @comment.save
 
-    redirect_to topic_path(@topic), notice: 'Votre commentaire a été ajouté.'
+    if @comment.save
+      redirect_to topic_path(@topic), notice: 'Votre commentaire a été ajouté.'
+    else
+      @comments = @topic.comments.includes(:user)
+      render 'topics/show'
+    end
   end
 
   def destroy

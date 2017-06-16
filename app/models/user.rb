@@ -4,10 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  def full_name
-    return last_name unless first_name
-    return first_name unless last_name
+  validates :first_name, presence: true
+  validates :last_name, presence: true
 
+  def full_name
   	first_name + " " + last_name
   end
 

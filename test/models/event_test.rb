@@ -4,10 +4,10 @@ class EventTest < ActiveSupport::TestCase
   test "validations" do
     e = Event.new
 
-    e.title = 'Camp'
+    e.title = "Camp"
     refute e.valid?
 
-    e.happen_on = 'wallah'
+    e.happen_on = "wallah"
     refute e.valid?
 
     e.happen_on = DateTime.now

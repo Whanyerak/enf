@@ -18,7 +18,19 @@
 
 <h3>Ajouter un commentaire</h3>
 
-<%= form_for([@topic, @topic.comments.build]) do |f| %>
+<% if @comment.errors.any? %>
+  <div class="alert">
+    Une ou plusieurs erreur(s) ont empêché la création de votre commentaire :
+
+    <ul>
+      <% @comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for([@topic, @comment]) do |f| %>
   <div class="field">
     <%= f.text_area :body, placeholder: 'Votre commentaire ...', cols: 50, rows: 10,
           class: 'comment' %>

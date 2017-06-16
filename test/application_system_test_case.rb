@@ -7,12 +7,15 @@ class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
     User.create!(
       email: 'mama@dou.fr',
       password: 'azertyuiop',
-      password_confirmation: 'azertyuiop'
+      password_confirmation: 'azertyuiop',
+      first_name: 'Mamadou',
+      last_name: 'Dupont',
+      branch: 1
     )
 
     visit '/'
     fill_in 'Courriel', with: 'mama@dou.fr'
     fill_in 'Mot de passe', with: 'azertyuiop'
-    click_on 'Log in'
+    click_on 'Connexion'
   end
 end

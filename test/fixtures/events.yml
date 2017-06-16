@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-upcoming:
-  title: MyString
+one:
+  title: An event
   happen_on: 2017-04-04
   place: MyString
 
-past:
-  title: MyString
+two:
+  title: Another one
   happen_on: 2017-03-03
   place: MyString

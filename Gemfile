@@ -1,7 +1,14 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 5.1.1'
-gem 'pg'
+
+group :development do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg', '~> 0.21'
+end
 
 gem 'puma', '~> 3.0'
 
